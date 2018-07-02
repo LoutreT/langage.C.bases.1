@@ -3,6 +3,12 @@
 
 int main()
 {
+    /* Faire une addition et s'entraîner avec le type de valeur '%...' :
+    %d  = int,
+    %ld = long
+    %f  = Float ou Double
+    */
+
     int resultat = 0, nombre1 = 0, nombre2 = 0;
 
     printf("Quel nombre1 voulez-vous additionner ?");
