@@ -10,13 +10,14 @@ int main(int argc, char *argv[])
     int nombreADeviner = 0;  // Ici j'ai choisi de séparer mes 'int' en plusieurs lignes séparées
     int nombre = 0;
     int nombreDEssai = 0;
-    int essai = 0;
+    // int essai = 0;
 
     srand(time(NULL));
     nombreADeviner = (rand() % (MAX - MIN + 1)) + MIN;
 
-    printf(nombreADeviner);
-    printf("Hello ! Voici le jeu nomme 'Plus Ou Moins'\n\n La regle du jeu est de mettre un \n nombre jusqu'a ce que vous trouviez le bon nombre cache\n");
+    // printf(nombreADeviner);  // ---> A cause de cette ligne, mon jeu ne fonctionnait plus.
+
+    printf("Hello ! Voici le jeu du nom 'Plus Ou Moins'\n\n La regle du jeu est de mettre un \n nombre jusqu'a ce que vous trouviez le bon nombre cache\n");
 
     do
     {
@@ -24,14 +25,13 @@ int main(int argc, char *argv[])
         printf("\n\n Voici, choisissez un nombre entre 0 et 100 \n\n");
         scanf("%d", &nombre);
 
-
         if (nombre == nombreADeviner)
             printf("Voici, c'est le bon nombre !\n ");
 
         else if(nombre > nombreADeviner)
             printf("Non, il faut chercher un nombre plus petit \n");
 
-        else // (nombre < nombreADeviner)
+        else if (nombre < nombreADeviner)  // ---> J'ai choisi else if au lieu de else pour garder la condition exclusive propre à celle-ci parmis toutes les éventualités.
             printf("Ce n est pas ca il faut chercher un nombre plus grand \n");
 
 
@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 
     }while(nombre != nombreADeviner);
 
-    // printf("Vous avez joue en %d ", nombreDEssai);
+    printf("Vous avez joue en %d coups", nombreDEssai);
 
 
 
