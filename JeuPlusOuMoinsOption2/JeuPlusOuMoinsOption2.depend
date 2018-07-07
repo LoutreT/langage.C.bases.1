@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1530967499 source:c:\users\vincent\desktop\programm-c\langage.c.bases.1\jeuplusoumoinsoption2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
