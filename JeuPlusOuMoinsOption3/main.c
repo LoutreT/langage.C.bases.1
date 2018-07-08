@@ -74,8 +74,7 @@ int main(int argc, char *argv[])
 
                 if(devinette2 == joueur1)
                 {
-                    printf("\n T-Rex, vous avez gagne, vous avez bouffe Dracula.\n");
-                    return 105;
+                    printf("\n T-Rex, vous avez gagne, vous avez eu Dracula.\n");
                 }
                 else if(devinette2 > joueur1)
                 {
@@ -91,7 +90,7 @@ int main(int argc, char *argv[])
 
                 if(devinette1 == joueur2)
                 {
-                    printf("\n T-Rex, vous avez gagner, Dracula est bouffer\n");
+                    printf("\n Dracula, vous avez gagner, vous avez eu T-Rex, mais bonne chance quand meme avec cette bebete\n");
                 }
                 else if(devinette1 > joueur2)
                 {
