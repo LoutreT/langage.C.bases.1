@@ -64,33 +64,35 @@ int main(int argc, char *argv[])
 
             do
             {
-                printf("T-Rex, quel est le nombre enregistre par Dracula ?");
-                scanf("%d", devinette2);
-                printf("Dracula, quel est le nombre enregistre par T-Rex ?");
-                scanf("%d",devinette1);
+                nombreDEssai++;
+
+                printf("\n T-Rex, quel est le nombre enregistre par Dracula ?");
+                scanf("%d", &devinette2);
+                printf("\n Dracula, quel est le nombre enregistre par T-Rex ?");
+                scanf("%d", &devinette1);
                 if(devinette2 == joueur1 || devinette1 == joueur2)
                 {
-                    printf("Bravo ! Vous avez gagnes, vous pouvez à present vous saigner, aaargh ! encore plus fooort !");
+                    printf("\n Bravo ! Vous avez gagnes, vous pouvez à present vous saigner, aaargh ! encore plus fooort !");
                     if(devinette2 == joueur1)
                     {
-                        printf("T-Rex, vous avez gagner, Dracula est bouffer");
+                        printf("\n T-Rex, vous avez gagner, Dracula est bouffer");
                     }
                     else if(devinette1 == joueur2)
                     {
-                        printf("Dracula, vous avez gagner, T-Rex est bouffer");
+                        printf("\n Dracula, vous avez gagner, T-Rex est bouffer");
                     }
                 }
                 else if(devinette1 > joueur2 || devinette2 > joueur1)
                 {
-                    printf("Non, cherchez un nombre plus petit");
+                    printf("\n Non, cherchez un nombre plus petit");
                 }
                 else if(devinette1 < joueur2 || devinette2 < joueur1)
                 {
-                    printf("Allez, cherchez un nombre plus grand");
+                    printf("\n Allez, cherchez un nombre plus grand");
                 }
 
 
-            }while(devinette1 != devinette2 == joueur1 || devinette1 == joueur2);
+            }while(devinette2 != joueur1 && devinette1 != joueur2);
 
         }
         else
@@ -98,9 +100,9 @@ int main(int argc, char *argv[])
             return 0;
         }
 
-        printf("Voila, vous avez joue comme des saigneurs en %d coups \n\n ", nombreDEssai);
+        printf("\n Voila, vous avez joue comme des saigneurs en %d coups \n\n ", nombreDEssai);
 
-        printf("Recommencer la partie ? \n ");
+        printf("\n Recommencer la partie ? \n ");
         printf("5 = non merci \n ");
         printf("6 = ouiii \n ");
         scanf("%d", &continuerPartie);
