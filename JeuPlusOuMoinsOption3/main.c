@@ -61,36 +61,43 @@ int main(int argc, char *argv[])
             scanf("%d", &joueur1);
             printf("Joueur 2, votre pseudo sera T-Rex, veuillez introduire un nombre a faire deviner a votre voisin");
             scanf("%d", &joueur2);
-
+            printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
             do
             {
                 nombreDEssai++;
 
                 printf("\n T-Rex, quel est le nombre enregistre par Dracula ?");
                 scanf("%d", &devinette2);
-                printf("\n Dracula, quel est le nombre enregistre par T-Rex ?");
-                scanf("%d", &devinette1);
-                if(devinette2 == joueur1 || devinette1 == joueur2)
+
+                if(devinette2 == joueur1)
                 {
-                    printf("\n Bravo ! Vous avez gagnes, vous pouvez à present vous saigner, aaargh ! encore plus fooort !");
-                    if(devinette2 == joueur1)
-                    {
-                        printf("\n T-Rex, vous avez gagner, Dracula est bouffer");
-                    }
-                    else if(devinette1 == joueur2)
-                    {
-                        printf("\n Dracula, vous avez gagner, T-Rex est bouffer");
-                    }
+                    printf("\n T-Rex, vous avez gagne, vous avez bouffe Dracula.");
+                    return 0;
                 }
-                else if(devinette1 > joueur2 || devinette2 > joueur1)
+                else if(devinette1 > joueur2)
                 {
                     printf("\n Non, cherchez un nombre plus petit");
                 }
-                else if(devinette1 < joueur2 || devinette2 < joueur1)
+                else if(devinette1 < joueur2)
                 {
                     printf("\n Allez, cherchez un nombre plus grand");
                 }
+                /////////////////////////////////////////////////////////////////////
+                printf("\n Dracula, quel est le nombre enregistre par T-Rex ?");
+                scanf("%d", &devinette1);
 
+                if(devinette1 == joueur2)
+                {
+                    printf("\n T-Rex, vous avez gagner, Dracula est bouffer");
+                }
+                else if(devinette2 > joueur1)
+                {
+                    printf("\n Non, cherchez un nombre plus petit");
+                }
+                else if(devinette2 < joueur1)
+                {
+                    printf("\n Allez, cherchez un nombre plus grand");
+                }
 
             }while(devinette2 != joueur1 && devinette1 != joueur2);
 
