@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
     int nombreDEssai = 0;
     int continuerPartie = 0;
     int soloOuDuo = 0;
-    int LEVEL = 0;
+    int level = 0;
 
     srand(time(NULL));
 
@@ -32,23 +32,21 @@ int main(int argc, char *argv[])
 
             switch(level)
             {
-                case 1 : MIN = 1; MAX = 100;
-                nombreADeviner = (rand() % (MAX - MIN + 1)) + MIN;
-                printf("\n\n Voici, choisissez un nombre entre 0 et 100 \n\n");
-                break;
-                case 2 :
-                MAX = 1000;
-                nombreADeviner = (rand() % (MAX - MIN + 1)) + MIN;
-                printf("\n\n Voici, choisissez un nombre entre 0 et 1000 \n\n");
-                break;
-                case 3 :
-                MAX = 10000;
-                nombreADeviner = (rand() % (MAX - MIN + 1)) + MIN;
-                printf("\n\n Voici, choisissez un nombre entre 0 et 10000 \n\n");
-                break;
+                case 1 : MAX = 100;
+                    nombreADeviner = (rand() % (MAX - MIN + 1)) + MIN;
+                    printf("\n\n Voici, choisissez un nombre entre 0 et 100 \n\n");
+                    break;
+                case 2 : MAX = 1000;
+                    nombreADeviner = (rand() % (MAX - MIN + 1)) + MIN;
+                    printf("\n\n Voici, choisissez un nombre entre 0 et 1000 \n\n");
+                    break;
+                case 3 : MAX = 10000;
+                    nombreADeviner = (rand() % (MAX - MIN + 1)) + MIN;
+                    printf("\n\n Voici, choisissez un nombre entre 0 et 10000 \n\n");
+                    break;
                 default :
-                printf("Veuillez recommencer votre choix de LEVEL entre 1, 2 et 3");
-                break;
+                    printf("Veuillez recommencer votre choix de LEVEL entre 1, 2 et 3");
+                    break;
             }
 
 
