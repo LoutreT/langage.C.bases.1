@@ -4,7 +4,7 @@
 
 int main(int argc, char *argv[])
 {
-    const int MIN = 1; // Ici j ai choisi de séparer mes 2 constantes en 2 lignes séparées
+    const int MIN = 1;
     int MAX = 0;  // Ici j avais oublié de supprimer la constante pour modifier le choix de level entre 100, 1000 et 10000 !
 
     int nombreADeviner = 0;  // Ici j'ai choisi de séparer mes 'int' en plusieurs lignes séparées
@@ -93,7 +93,7 @@ int main(int argc, char *argv[])
             do
             {
                 nombreDEssai++;
-
+                /////////////////////////////// Dracula //////////////////////////////////////
                 printf("\n  T-Rex, quel est le nombre enregistre par Dracula ?");
                 scanf("%d", &devinette2);
 
@@ -109,7 +109,8 @@ int main(int argc, char *argv[])
                 {
                     printf("\n  Non, cherchez un nombre plus grand, y aura de la bonne chaire\n");
                 }
-                /////////////////////////////////////////////////////////////////////
+
+                /////////////////////////////// T-Rex //////////////////////////////////////
                 printf("\n  Dracula, quel est le nombre enregistre par T-Rex ?");
                 scanf("%d", &devinette1);
 
@@ -123,7 +124,7 @@ int main(int argc, char *argv[])
                 }
                 else if(devinette1 < joueur2)
                 {
-                    printf("\n  mmmh, cherchez un nombre plus grand y a du sot-l-y-laisse par la miam miam \n");
+                    printf("\n  mmmh, cherchez un nombre plus grand y a du sot-l-y-laisse par la, miam miam \n");
                 }
 
             }while(devinette2 != joueur1 && devinette1 != joueur2);
@@ -131,17 +132,17 @@ int main(int argc, char *argv[])
         }
         else
         {
-            return 0;
+            printf("Vous semblez ne pas avoir choisi 3 ou 4, donc abandon.");
+            return ;
         }
 
         printf("\n\n Voila, vous avez joue comme des saigneurs en %d coups \n\n ", nombreDEssai);
 
-        printf("\n Recommencer la partie ? choisissez en tapant 5 ou 6\n ");
+        printf("\n Recommencer la partie ? choisissez en tapant 5 ou 6 \n ");
         printf("5 = non merci \n ");
         printf("6 = ouiii \n ");
         scanf("%d", &continuerPartie);
         nombreDEssai = 0;
-
     }while(continuerPartie == 6);
 
     return 0;
