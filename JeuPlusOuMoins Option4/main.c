@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
                     printf("\n  Voici, choisissez un nombre entre 0 et 10000 \n\n");
                     break;
                 default :
-                    printf("  Veuillez recommencer votre choix de LEVEL entre 1, 2 et 3\n");
+                    printf("  Vous n'avez pas selectionne 1, 2 et 3 donc j'ai choisi pour vous\n");
                     break;
             }
 
